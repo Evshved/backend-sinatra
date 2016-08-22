@@ -1,0 +1,10 @@
+body {
+  font-family: Arial, sans-serif;
+}
+.letter {
+  color: red;
+  font-size: 100%;
+  font-family: serif;
+  top: 10px;
+}
+
