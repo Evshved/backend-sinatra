@@ -1,0 +1,83 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %link{:href => "/assets/images/favicon.ico", :rel => "icon"}/
+    %title System for solving mathematical equations
+    %link{:href => "/assets/stylesheets/style.css", :rel => "stylesheet"}/
+    %script{:src => "/assets/javascripts/libs/jquery-3.1.0.min.js", :type => "text/javascript"}
+    %script{:src => "https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"}
+    %script{:src => "https://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"}
+    %link{:href => "/assets/stylesheets/bootstrap.min.css", :rel => "stylesheet"}/
+    %script{:src => "/assets/javascripts/libs/ie-emulation-modes-warning.js"}
+  %body
+    %nav.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand Math on Sinatra
+        #navbar.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li.active
+              %a{:href => "/"} Home
+            %li
+              %a{:href => "contact"} Contact
+    %form#myform{:style => "margin-left: 50px; margin-top: 80px;"}
+      %h3 Hi, it's system for solving mathematical equations.
+      %h4 She can solve 2 type of equations.
+      %p
+        %b Choose type of mathematical equation
+      %input#linear{:name => "switch", :type => "radio", :value => "1"}/
+      Linear
+      %input#quadratic{:name => "switch", :type => "radio", :value => "0"}/
+      Quadratic
+    %form#myforma{:style => "margin-left: 50px;"}
+      %h4
+        %span.letter k∙x + b = y
+      = succeed "x+" do
+        %input#fieldfirstlin.left{name: "first_coeflin", maxlength: "25", size: 10, value: "2"}/
+      %input#fieldsecondlin.left{name: "second_coeflin", maxlength: "25", size: 10, value: "4"}/
+      \= 0
+      %br/
+      %br/
+      %button.btn.btn-success{:type => "submit"}
+        Answer
+      %br/
+      %br/
+      %input#fieldanswerqua.left{name: "answer_for_lin", maxlength: "25", size: 25, value: ""}/
+
+
+    %form#myformb{:style => "margin-left: 50px;"}
+      %h4
+        %span.letter
+          ax
+          %sup 2
+          + bx + c = y
+      %input#fieldfirstqua.left{name: "first_coefqua", maxlength: "25", size: 10, value: "2"}/
+      x
+      %sup> 2
+      +
+      %input#fieldsecondqua.left{name: "second_coefqua", maxlength: "25", size: 10, value: "2"}/
+      x+
+      %input#fieldthirdqua.left{name: "third_coefqua", maxlength: "25", size: 10, value: "2"}/
+      \= 0
+      %br/
+      %br/
+      %button.btn.btn-success{:type => "submit"}
+        Answer
+      %br/
+      %br/
+      %input#fieldanswerqua.left{name: "answer_for_qua", maxlength: "25", size: 25, value: ""}/
+
+    %input{:type => "hidden", :value => "ch1"}/
+  %script{:src => "/assets/javascripts/libs/bootstrap.min.js"}
+  %script{:src => "/assets/javascripts/script.js"}
+
+
+

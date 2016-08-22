@@ -1,0 +1,38 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %link{:href => "/assets/images/favicon.ico", :rel => "icon"}/
+    %title System for solving mathematical equations
+    %link{:href => "/assets/stylesheets/style.css", :rel => "stylesheet"}/
+    %link{:href => "/assets/stylesheets/bootstrap.min.css", :rel => "stylesheet"}/
+  %body
+    %nav.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand Math on Sinatra
+        #navbar.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li
+              %a{:href => "/"} Home
+            %li.active
+              %a{:href => "#contact"} Contact
+    %form#myform{:style => "margin-left: 50px; margin-top: 80px;"}
+      %h3 Hi, I'm Eugene Shved.
+      %h4 Contact me - shved.eugene@gmail.com
+      %h4
+        Github
+        %a{:href => "https://github.com/Evshved/mathsinatra"} click
+
+
+
+
+
