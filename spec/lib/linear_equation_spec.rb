@@ -1,6 +1,6 @@
 require_relative '../spec_helper'
 
-RSpec.describe LinearEquation  do
+RSpec.describe LinearEquation do
   describe '#roots' do
     subject { described_class.new(k, b) }
 
