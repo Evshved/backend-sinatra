@@ -18,6 +18,7 @@ get '/contact' do
 end
 
 post '/' do
-  @algorithm = Equation.new
-  @algorithm.solving_equation
+  @algorithm = Equation.new(params)
+  @output = @algorithm.solving_equation
+  json result: @output.to_s
 end

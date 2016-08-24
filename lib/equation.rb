@@ -1,9 +1,13 @@
 # union linear & quadratic solving
 class Equation
+  attr_reader :params
+  def initialize(params)
+    @params = params
+  end
+
   def solving_equation
     @status = params[:check].to_s
     check_for_type
-    json result: @data.to_s
   end
 
   def check_for_type
