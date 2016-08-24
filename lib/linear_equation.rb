@@ -1,3 +1,4 @@
+# solve linear equation
 class LinearEquation < Equation
   def initialize(k, b)
     @k = k
@@ -5,7 +6,7 @@ class LinearEquation < Equation
   end
 
   def roots
-    return 'Answer: no roots' if @k == 0
+    return 'Answer: no roots' if @k.zero?
     @answer = -@b / @k
     "Answer: #{@answer}"
   end

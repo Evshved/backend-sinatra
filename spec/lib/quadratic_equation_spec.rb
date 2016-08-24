@@ -16,7 +16,7 @@ RSpec.describe QuadraticEquation do
       let(:b) { 2 }
       let(:c) { 1 }
 
-      specify { expect(subject.roots).to eq('Answer: [-1]') }
+      specify { expect(subject.roots).to eq('Answer: -1') }
     end
 
     context 'discriminant < 0' do
