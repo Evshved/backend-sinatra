@@ -4,13 +4,16 @@
 
 
 ##### Run app
-* cd mathsinatra
-* bundle install
-* bundle exec ruby app.rb
+```
+cd mathsinatra
+bundle install
+bundle exec ruby app.rb
+```
 * link on localhost <a href = "http://localhost:4567/" > - click </a>
 
 ##### Run tests
-* cd mathsinatra
-* bundle install
-* bundle exec rspec spec/
-
+```
+cd mathsinatra
+bundle install
+bundle exec rspec spec/
+```
